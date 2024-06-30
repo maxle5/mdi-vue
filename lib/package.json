@@ -1,5 +1,6 @@
 {
   "name": "@maxle5/mdi-vue",
+  "description": "Vue distribution for the Material Design Icons.",
   "type": "module",
   "scripts": {
     "build": "tsc -b && vite build"
