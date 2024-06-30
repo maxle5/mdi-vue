@@ -1,0 +1,27 @@
+<template>
+    <svg :width="size" :height="size" :viewBox="viewbox">
+        <path d="M5 5V19H7V21H3V3H7V5H5M20 7H7V9H20V7M20 11H7V13H20V11M20 15H7V17H20V15Z" xmlns="http://www.w3.org/2000/svg" />
+    </svg>
+</template>
+
+<script>
+export default {
+    name: "FormatListGroup",
+    props: {
+        size: { 
+            type: Number, 
+            default: 24 
+        },
+        viewbox: {
+            type: String, 
+            default: "0 0 24 24" 
+        },
+    },
+}
+</script>
+
+<style scoped>
+    path {
+        fill: currentColor;
+    }
+</style>

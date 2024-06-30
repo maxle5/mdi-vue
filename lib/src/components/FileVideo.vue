@@ -1,0 +1,27 @@
+<template>
+    <svg :width="size" :height="size" :viewBox="viewbox">
+        <path d="M13,9H18.5L13,3.5V9M6,2H14L20,8V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V4C4,2.89 4.89,2 6,2M17,19V13L14,15.2V13H7V19H14V16.8L17,19Z" xmlns="http://www.w3.org/2000/svg" />
+    </svg>
+</template>
+
+<script>
+export default {
+    name: "FileVideo",
+    props: {
+        size: { 
+            type: Number, 
+            default: 24 
+        },
+        viewbox: {
+            type: String, 
+            default: "0 0 24 24" 
+        },
+    },
+}
+</script>
+
+<style scoped>
+    path {
+        fill: currentColor;
+    }
+</style>

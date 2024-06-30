@@ -1,0 +1,29 @@
+{
+  "name": "@maxle5/mdi-vue",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b && vite build"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/mdi-vue.umd.cjs",
+  "module": "./dist/mdi-vue.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mdi-vue.js",
+      "require": "./dist/mdi-vue.umd.cjs"
+    }
+  },
+  "dependencies": {
+    "vue": "^3.4.30"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.24.7",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.1",
+    "vite-plugin-dts": "^3.9.1",
+    "vue-tsc": "^2.0.22"
+  }
+}

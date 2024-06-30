@@ -1,0 +1,27 @@
+<template>
+    <svg :width="size" :height="size" :viewBox="viewbox">
+        <path d="M14.4,6L14,4H5V21H7V14H12.6L13,16H20V6H14.4Z" xmlns="http://www.w3.org/2000/svg" />
+    </svg>
+</template>
+
+<script>
+export default {
+    name: "Flag",
+    props: {
+        size: { 
+            type: Number, 
+            default: 24 
+        },
+        viewbox: {
+            type: String, 
+            default: "0 0 24 24" 
+        },
+    },
+}
+</script>
+
+<style scoped>
+    path {
+        fill: currentColor;
+    }
+</style>

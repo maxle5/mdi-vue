@@ -1,0 +1,27 @@
+<template>
+    <svg :width="size" :height="size" :viewBox="viewbox">
+        <path d="M5.83,8.66L3,11.5V3H11.5L8.66,5.83L18.17,15.34L21,12.5V21H12.5L15.34,18.17L5.83,8.66Z" xmlns="http://www.w3.org/2000/svg" />
+    </svg>
+</template>
+
+<script>
+export default {
+    name: "ArrowTopLeftBottomRightBold",
+    props: {
+        size: { 
+            type: Number, 
+            default: 24 
+        },
+        viewbox: {
+            type: String, 
+            default: "0 0 24 24" 
+        },
+    },
+}
+</script>
+
+<style scoped>
+    path {
+        fill: currentColor;
+    }
+</style>

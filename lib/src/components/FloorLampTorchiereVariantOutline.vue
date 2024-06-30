@@ -1,0 +1,27 @@
+<template>
+    <svg :width="size" :height="size" :viewBox="viewbox">
+        <path d="M13.97 4L12.68 7H11.32L10.03 4H13.97M17 2H7L10 9H14L17 2M15.92 22L13 15V22H11V15L8.08 22H5.92L10.92 10H13.08L18.08 22H15.92Z" xmlns="http://www.w3.org/2000/svg" />
+    </svg>
+</template>
+
+<script>
+export default {
+    name: "FloorLampTorchiereVariantOutline",
+    props: {
+        size: { 
+            type: Number, 
+            default: 24 
+        },
+        viewbox: {
+            type: String, 
+            default: "0 0 24 24" 
+        },
+    },
+}
+</script>
+
+<style scoped>
+    path {
+        fill: currentColor;
+    }
+</style>
