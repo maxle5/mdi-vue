@@ -1,5 +1,6 @@
 {
   "name": "@maxle5/mdi-vue",
+  "version": "7.4.47",
   "description": "Vue distribution for the Material Design Icons.",
   "type": "module",
   "scripts": {
