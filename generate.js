@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const componentTemplate = `
 <template>
-  <svg :width="size" :height="size" :viewBox="viewBox">
+  <svg :width="size" :height="size" viewBox="0 0 24 24">
       <path d="{{path}}" style="fill: currentColor" />
   </svg>
 </template>
@@ -24,11 +24,6 @@ const componentTemplate = `
               default: 24 
           }
       },
-      computed: {
-        viewBox() {
-          return \`0 0 \${this.size} \${this.size}\`;
-        }
-      }
   })
 </script>
 `;
