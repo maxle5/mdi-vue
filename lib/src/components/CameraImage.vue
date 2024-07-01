@@ -1,23 +1,24 @@
-<template>
-    <svg :width="size" :height="size" :viewBox="viewbox">
-        <path d="M4,5H7L9,3H15L17,5H20A2,2 0 0,1 22,7V19A2,2 0 0,1 20,21H4A2,2 0 0,1 2,19V7A2,2 0 0,1 4,5M13.09,9.45L11.05,12.18L12.6,14.25L11.73,14.91L9.27,11.64L6,16H18L13.09,9.45Z" style="fill: currentColor" />
-    </svg>
-</template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+  <template>
+      <svg :width="size" :height="size" :viewBox="viewbox">
+          <path d="M4,5H7L9,3H15L17,5H20A2,2 0 0,1 22,7V19A2,2 0 0,1 20,21H4A2,2 0 0,1 2,19V7A2,2 0 0,1 4,5M13.09,9.45L11.05,12.18L12.6,14.25L11.73,14.91L9.27,11.64L6,16H18L13.09,9.45Z" style="fill: currentColor" />
+      </svg>
+  </template>
 
-export default defineComponent({
-    name: "CameraImage",
-    props: {
-        size: { 
-            type: Number, 
-            default: 24 
-        },
-        viewbox: {
-            type: String, 
-            default: "0 0 24 24" 
-        },
-    },
-})
-</script>
+  <script lang="ts">
+  import { defineComponent } from 'vue';
+
+  export default defineComponent({
+      name: "CameraImage",
+      props: {
+          size: { 
+              type: Number, 
+              default: 24 
+          },
+          viewbox: {
+              type: String, 
+              default: "0 0 24 24" 
+          },
+      },
+  })
+  </script>

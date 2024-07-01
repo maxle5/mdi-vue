@@ -1,23 +1,24 @@
-<template>
-    <svg :width="size" :height="size" :viewBox="viewbox">
-        <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2M20 16H5.2L4 17.2V4H20V16M5 14L8.5 9.5L11 12.5L14.5 8L19 14" style="fill: currentColor" />
-    </svg>
-</template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+  <template>
+      <svg :width="size" :height="size" :viewBox="viewbox">
+          <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2M20 16H5.2L4 17.2V4H20V16M5 14L8.5 9.5L11 12.5L14.5 8L19 14" style="fill: currentColor" />
+      </svg>
+  </template>
 
-export default defineComponent({
-    name: "MessageImageOutline",
-    props: {
-        size: { 
-            type: Number, 
-            default: 24 
-        },
-        viewbox: {
-            type: String, 
-            default: "0 0 24 24" 
-        },
-    },
-})
-</script>
+  <script lang="ts">
+  import { defineComponent } from 'vue';
+
+  export default defineComponent({
+      name: "MessageImageOutline",
+      props: {
+          size: { 
+              type: Number, 
+              default: 24 
+          },
+          viewbox: {
+              type: String, 
+              default: "0 0 24 24" 
+          },
+      },
+  })
+  </script>

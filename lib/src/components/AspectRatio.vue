@@ -1,23 +1,24 @@
-<template>
-    <svg :width="size" :height="size" :viewBox="viewbox">
-        <path d="M19,12H17V15H14V17H19V12M7,9H10V7H5V12H7V9M21,3H3A2,2 0 0,0 1,5V19A2,2 0 0,0 3,21H21A2,2 0 0,0 23,19V5A2,2 0 0,0 21,3M21,19H3V5H21V19Z" style="fill: currentColor" />
-    </svg>
-</template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+  <template>
+      <svg :width="size" :height="size" :viewBox="viewbox">
+          <path d="M19,12H17V15H14V17H19V12M7,9H10V7H5V12H7V9M21,3H3A2,2 0 0,0 1,5V19A2,2 0 0,0 3,21H21A2,2 0 0,0 23,19V5A2,2 0 0,0 21,3M21,19H3V5H21V19Z" style="fill: currentColor" />
+      </svg>
+  </template>
 
-export default defineComponent({
-    name: "AspectRatio",
-    props: {
-        size: { 
-            type: Number, 
-            default: 24 
-        },
-        viewbox: {
-            type: String, 
-            default: "0 0 24 24" 
-        },
-    },
-})
-</script>
+  <script lang="ts">
+  import { defineComponent } from 'vue';
+
+  export default defineComponent({
+      name: "AspectRatio",
+      props: {
+          size: { 
+              type: Number, 
+              default: 24 
+          },
+          viewbox: {
+              type: String, 
+              default: "0 0 24 24" 
+          },
+      },
+  })
+  </script>

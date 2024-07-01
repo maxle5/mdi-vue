@@ -1,23 +1,24 @@
-<template>
-    <svg :width="size" :height="size" :viewBox="viewbox">
-        <path d="M15,5H17V3H15M19,21H21V19H19M19,13H21V11H19M19,5H21V3H19M19,17H21V15H19M15,21H17V19H15M19,9H21V7H19M3,21H5V3H3M7,5H9V3H7M7,21H9V19H7M11,5H13V3H11M11,21H13V19H11V21Z" style="fill: currentColor" />
-    </svg>
-</template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+  <template>
+      <svg :width="size" :height="size" :viewBox="viewbox">
+          <path d="M15,5H17V3H15M19,21H21V19H19M19,13H21V11H19M19,5H21V3H19M19,17H21V15H19M15,21H17V19H15M19,9H21V7H19M3,21H5V3H3M7,5H9V3H7M7,21H9V19H7M11,5H13V3H11M11,21H13V19H11V21Z" style="fill: currentColor" />
+      </svg>
+  </template>
 
-export default defineComponent({
-    name: "BorderLeftVariant",
-    props: {
-        size: { 
-            type: Number, 
-            default: 24 
-        },
-        viewbox: {
-            type: String, 
-            default: "0 0 24 24" 
-        },
-    },
-})
-</script>
+  <script lang="ts">
+  import { defineComponent } from 'vue';
+
+  export default defineComponent({
+      name: "BorderLeftVariant",
+      props: {
+          size: { 
+              type: Number, 
+              default: 24 
+          },
+          viewbox: {
+              type: String, 
+              default: "0 0 24 24" 
+          },
+      },
+  })
+  </script>

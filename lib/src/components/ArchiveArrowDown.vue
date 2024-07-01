@@ -1,23 +1,24 @@
-<template>
-    <svg :width="size" :height="size" :viewBox="viewbox">
-        <path d="M3 3H21V7H3V3M4 21V8H20V21H4M14 14V11H10V14H7L12 19L17 14H14Z" style="fill: currentColor" />
-    </svg>
-</template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+  <template>
+      <svg :width="size" :height="size" :viewBox="viewbox">
+          <path d="M3 3H21V7H3V3M4 21V8H20V21H4M14 14V11H10V14H7L12 19L17 14H14Z" style="fill: currentColor" />
+      </svg>
+  </template>
 
-export default defineComponent({
-    name: "ArchiveArrowDown",
-    props: {
-        size: { 
-            type: Number, 
-            default: 24 
-        },
-        viewbox: {
-            type: String, 
-            default: "0 0 24 24" 
-        },
-    },
-})
-</script>
+  <script lang="ts">
+  import { defineComponent } from 'vue';
+
+  export default defineComponent({
+      name: "ArchiveArrowDown",
+      props: {
+          size: { 
+              type: Number, 
+              default: 24 
+          },
+          viewbox: {
+              type: String, 
+              default: "0 0 24 24" 
+          },
+      },
+  })
+  </script>

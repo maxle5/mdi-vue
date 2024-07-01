@@ -4906,12 +4906,6 @@ import Numeric0BoxOutline from './components/Numeric0BoxOutline.vue';
 import Numeric0Circle from './components/Numeric0Circle.vue';
 import Numeric0CircleOutline from './components/Numeric0CircleOutline.vue';
 import Numeric1 from './components/Numeric1.vue';
-import Numeric1Box from './components/Numeric1Box.vue';
-import Numeric1BoxMultiple from './components/Numeric1BoxMultiple.vue';
-import Numeric1BoxMultipleOutline from './components/Numeric1BoxMultipleOutline.vue';
-import Numeric1BoxOutline from './components/Numeric1BoxOutline.vue';
-import Numeric1Circle from './components/Numeric1Circle.vue';
-import Numeric1CircleOutline from './components/Numeric1CircleOutline.vue';
 import Numeric10 from './components/Numeric10.vue';
 import Numeric10Box from './components/Numeric10Box.vue';
 import Numeric10BoxMultiple from './components/Numeric10BoxMultiple.vue';
@@ -4919,6 +4913,12 @@ import Numeric10BoxMultipleOutline from './components/Numeric10BoxMultipleOutlin
 import Numeric10BoxOutline from './components/Numeric10BoxOutline.vue';
 import Numeric10Circle from './components/Numeric10Circle.vue';
 import Numeric10CircleOutline from './components/Numeric10CircleOutline.vue';
+import Numeric1Box from './components/Numeric1Box.vue';
+import Numeric1BoxMultiple from './components/Numeric1BoxMultiple.vue';
+import Numeric1BoxMultipleOutline from './components/Numeric1BoxMultipleOutline.vue';
+import Numeric1BoxOutline from './components/Numeric1BoxOutline.vue';
+import Numeric1Circle from './components/Numeric1Circle.vue';
+import Numeric1CircleOutline from './components/Numeric1CircleOutline.vue';
 import Numeric2 from './components/Numeric2.vue';
 import Numeric2Box from './components/Numeric2Box.vue';
 import Numeric2BoxMultiple from './components/Numeric2BoxMultiple.vue';
@@ -12355,12 +12355,6 @@ export {
 	Numeric0Circle,
 	Numeric0CircleOutline,
 	Numeric1,
-	Numeric1Box,
-	Numeric1BoxMultiple,
-	Numeric1BoxMultipleOutline,
-	Numeric1BoxOutline,
-	Numeric1Circle,
-	Numeric1CircleOutline,
 	Numeric10,
 	Numeric10Box,
 	Numeric10BoxMultiple,
@@ -12368,6 +12362,12 @@ export {
 	Numeric10BoxOutline,
 	Numeric10Circle,
 	Numeric10CircleOutline,
+	Numeric1Box,
+	Numeric1BoxMultiple,
+	Numeric1BoxMultipleOutline,
+	Numeric1BoxOutline,
+	Numeric1Circle,
+	Numeric1CircleOutline,
 	Numeric2,
 	Numeric2Box,
 	Numeric2BoxMultiple,
@@ -14895,3 +14895,4 @@ export {
 	ZodiacTaurus,
 	ZodiacVirgo
 };
+  
