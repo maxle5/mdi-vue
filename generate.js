@@ -6,7 +6,7 @@ import { rimraf } from "rimraf";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const template = `
+const componentTemplate = `
   <template>
       <svg :width="size" :height="size" :viewBox="viewbox">
           <path d="{{path}}" style="fill: currentColor" />
@@ -31,6 +31,16 @@ const template = `
   })
   </script>
 `;
+const testTemplate = `
+import { mount } from "@vue/test-utils";
+import { expect, test } from "vitest";
+import {{name}} from "../../src/components/{{name}}.vue";
+
+test("{{name}} snapshot", () => {
+  const wrapper = mount({{name}}, {});
+  expect(wrapper.html()).toMatchSnapshot();
+});
+`;
 
 const parser = new XMLParser({
   ignoreAttributes: false,
@@ -45,9 +55,13 @@ const getIconName = (file) =>
     .join("")
     .replace(".svg", "");
 
-// refresh components folder
+// refresh components
 await rimraf(resolve(__dirname, "src/components"));
 await mkdir(resolve(__dirname, "src/components"));
+
+// refresh tests
+await rimraf(resolve(__dirname, "tests/components"));
+await mkdir(resolve(__dirname, "tests/components"));
 
 // generate vue components from mdi svg files
 const files = await readdir(resolve(__dirname, "node_modules/@mdi/svg/svg"));
@@ -62,7 +76,14 @@ for (const file of files) {
 
   await writeFile(
     resolve(__dirname, "src/components", iconName + ".vue"),
-    template.replace("{{path}}", iconPath).replace("{{name}}", iconName)
+    componentTemplate
+      .replace(/{{path}}/g, iconPath)
+      .replace(/{{name}}/g, iconName)
+  );
+
+  await writeFile(
+    resolve(__dirname, "tests/components", iconName + ".spec.ts"),
+    testTemplate.replace(/{{name}}/g, iconName)
   );
 }
 

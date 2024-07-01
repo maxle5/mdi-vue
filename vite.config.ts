@@ -1,6 +1,7 @@
-import vue from "@vitejs/plugin-vue";
-import * as path from "path";
+/// <reference types="vitest" />
 import { defineConfig } from "vite";
+import path from "path";
+import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
 
 export default defineConfig({
@@ -19,6 +20,10 @@ export default defineConfig({
         },
       },
     },
+  },
+  test: {
+    globals: true,
+    environment: "happy-dom",
   },
   resolve: {
     alias: {
