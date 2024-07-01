@@ -21,7 +21,8 @@ jobs:
       - name: Determine current @maxle5/mdi-vue version
         uses: rexdefuror/read-package-json@v1.0.5        
 
-      - name: Bump package.json version        
+      - name: Bump package.json version
+        if: ${{ env.PACKAGE_VERSION != steps.theirs.outputs.version }}  
         uses: dmikey/package-json-version@v0.0.2
         with:
           # This will be the version you want to set in the package.json file
@@ -36,7 +37,8 @@ jobs:
           npm run generate
           npm run build
 
-      - name: Create Pull Request    
+      - name: Create Pull Request
+        if: ${{ env.PACKAGE_VERSION != steps.theirs.outputs.version }}  
         uses: peter-evans/create-pull-request@v6
         with: 
           commit-message: |
