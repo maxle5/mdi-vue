@@ -7,10 +7,10 @@
     "url": "git+https://github.com/maxle5/mdi-vue.git"
   },
   "scripts": {
-    "generate": "node generate.js",
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate": "node generate.js"
   },
   "keywords": [
     "material",
