@@ -17,7 +17,23 @@ jobs:
       - name: Determine current @maxle5/mdi-vue version
         uses: rexdefuror/read-package-json@v1.0.5        
 
-      - name: Update
+      - name: Bump package.json version        
+        uses: dmikey/package-json-version@v0.0.2
+        with:
+          # This will be the version you want to set in the package.json file
+          version: ${{ steps.theirs.outputs.version }}
+          git-tag-version: false
+
+      - name: Build @maxle5/mdi-vue
         if: ${{ env.PACKAGE_VERSION != steps.theirs.outputs.version }}        
         run: |
-          echo outdated!!!"
+          npm install @mdi/svg@latest -D
+          npm install
+          npm run generate
+          npm run build
+
+      - name: Create Pull Request    
+        uses: peter-evans/create-pull-request@v6
+        with: 
+          commit-message: |
+            updated to ${{ steps.theirs.outputs.version }}
