@@ -8,7 +8,7 @@ on:
 jobs:
   updater:
     runs-on: ubuntu-24.04
-    permissions: write # allow this action to write to the repo (e.g. create PR) 
+    permissions: 'write' # allow this action to write to the repo (e.g. create PR) 
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.7
