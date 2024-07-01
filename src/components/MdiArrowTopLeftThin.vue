@@ -1,11 +1,11 @@
 
-  <template>
-      <svg :width="size" :height="size" :viewBox="viewBox">
-          <path d="M12.07 5L9.24 7.83L19 17.59L17.58 19L7.82 9.25L5 12.07V5Z" style="fill: currentColor" />
-      </svg>
-  </template>
+<template>
+  <svg :width="size" :height="size" :viewBox="viewBox">
+      <path d="M12.07 5L9.24 7.83L19 17.59L17.58 19L7.82 9.25L5 12.07V5Z" style="fill: currentColor" />
+  </svg>
+</template>
 
-  <script lang="ts">
+<script lang="ts">
   import { defineComponent } from 'vue';
 
   export default defineComponent({
@@ -22,4 +22,4 @@
         }
       }
   })
-  </script>
+</script>

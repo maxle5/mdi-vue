@@ -7,13 +7,13 @@ import mdiIcons from "@mdi/js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const componentTemplate = `
-  <template>
-      <svg :width="size" :height="size" :viewBox="viewBox">
-          <path d="{{path}}" style="fill: currentColor" />
-      </svg>
-  </template>
+<template>
+  <svg :width="size" :height="size" :viewBox="viewBox">
+      <path d="{{path}}" style="fill: currentColor" />
+  </svg>
+</template>
 
-  <script lang="ts">
+<script lang="ts">
   import { defineComponent } from 'vue';
 
   export default defineComponent({
@@ -30,7 +30,7 @@ const componentTemplate = `
         }
       }
   })
-  </script>
+</script>
 `;
 const testTemplate = `
 import { mount } from "@vue/test-utils";
@@ -47,10 +47,10 @@ test("{{name}} snapshot", () => {
 await rimraf(resolve(__dirname, "src/components"));
 await mkdir(resolve(__dirname, "src/components"));
 
-// generate vue components from mdi svg files
+// generate vue components from mdi js paths
 const icons = Object.entries(mdiIcons).map(([name, path]) => ({
   path,
-  name: name[0].toUpperCase() + name.slice(1),
+  name: name[0].toUpperCase() + name.slice(1), // PascalCase
 }));
 
 for (const icon of icons) {
