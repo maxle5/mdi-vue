@@ -1,6 +1,6 @@
 
   <template>
-      <svg :width="size" :height="size" :viewBox="viewbox">
+      <svg :width="size" :height="size" :viewBox="viewBox">
           <path d="M14 17H12V15H14V17M20 7V17H18V9H16V7H20M4 17L8 9H4V7H10V9L6 17" style="fill: currentColor" />
       </svg>
   </template>
@@ -14,11 +14,12 @@
           size: { 
               type: Number, 
               default: 24 
-          },
-          viewbox: {
-              type: String, 
-              default: "0 0 24 24" 
-          },
+          }
       },
+      computed: {
+        viewBox() {
+          return `0 0 ${this.size} ${this.size}`;
+        }
+      }
   })
   </script>

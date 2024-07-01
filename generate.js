@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const componentTemplate = `
   <template>
-      <svg :width="size" :height="size" :viewBox="viewbox">
+      <svg :width="size" :height="size" :viewBox="viewBox">
           <path d="{{path}}" style="fill: currentColor" />
       </svg>
   </template>
@@ -22,12 +22,13 @@ const componentTemplate = `
           size: { 
               type: Number, 
               default: 24 
-          },
-          viewbox: {
-              type: String, 
-              default: "0 0 24 24" 
-          },
+          }
       },
+      computed: {
+        viewBox() {
+          return \`0 0 \${this.size} \${this.size}\`;
+        }
+      }
   })
   </script>
 `;
@@ -58,10 +59,6 @@ const getIconName = (file) =>
 // refresh components
 await rimraf(resolve(__dirname, "src/components"));
 await mkdir(resolve(__dirname, "src/components"));
-
-// refresh tests
-await rimraf(resolve(__dirname, "tests/components"));
-await mkdir(resolve(__dirname, "tests/components"));
 
 // generate vue components from mdi svg files
 const files = await readdir(resolve(__dirname, "node_modules/@mdi/svg/svg"));

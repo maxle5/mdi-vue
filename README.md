@@ -46,18 +46,6 @@ A collection of Vue single-file components (compatible with Vue 2 & 3) for rende
    ```
 
 ## Props
-
-- `title` - This changes the hover tooltip as well as the title shown to screen
-  readers. For accessibility purposes, if a `title` is not provided, then the
-  icon is hidden from screen readers. This is to force developers to use
-  meaningful titles for their icon usage.
-
-  Example:
-
-  ```html
-  <mdi-android title="this is an icon!" />
-  ```
-
 - `size` - This property overrides the `width` and `height` attributes on the
   SVG. The default is `24`.
 
