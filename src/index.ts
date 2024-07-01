@@ -26,9 +26,12 @@ import AccountArrowUpOutline from './components/AccountArrowUpOutline.vue';
 import AccountBadge from './components/AccountBadge.vue';
 import AccountBadgeOutline from './components/AccountBadgeOutline.vue';
 import AccountBox from './components/AccountBox.vue';
+import AccountBoxEditOutline from './components/AccountBoxEditOutline.vue';
+import AccountBoxMinusOutline from './components/AccountBoxMinusOutline.vue';
 import AccountBoxMultiple from './components/AccountBoxMultiple.vue';
 import AccountBoxMultipleOutline from './components/AccountBoxMultipleOutline.vue';
 import AccountBoxOutline from './components/AccountBoxOutline.vue';
+import AccountBoxPlusOutline from './components/AccountBoxPlusOutline.vue';
 import AccountCancel from './components/AccountCancel.vue';
 import AccountCancelOutline from './components/AccountCancelOutline.vue';
 import AccountCard from './components/AccountCard.vue';
@@ -1030,10 +1033,12 @@ import BookOff from './components/BookOff.vue';
 import BookOffOutline from './components/BookOffOutline.vue';
 import BookOpen from './components/BookOpen.vue';
 import BookOpenBlankVariant from './components/BookOpenBlankVariant.vue';
+import BookOpenBlankVariantOutline from './components/BookOpenBlankVariantOutline.vue';
 import BookOpenOutline from './components/BookOpenOutline.vue';
 import BookOpenPageVariant from './components/BookOpenPageVariant.vue';
 import BookOpenPageVariantOutline from './components/BookOpenPageVariantOutline.vue';
 import BookOpenVariant from './components/BookOpenVariant.vue';
+import BookOpenVariantOutline from './components/BookOpenVariantOutline.vue';
 import BookOutline from './components/BookOutline.vue';
 import BookPlay from './components/BookPlay.vue';
 import BookPlayOutline from './components/BookPlayOutline.vue';
@@ -1600,6 +1605,8 @@ import ChartBarStacked from './components/ChartBarStacked.vue';
 import ChartBellCurve from './components/ChartBellCurve.vue';
 import ChartBellCurveCumulative from './components/ChartBellCurveCumulative.vue';
 import ChartBox from './components/ChartBox.vue';
+import ChartBoxMultiple from './components/ChartBoxMultiple.vue';
+import ChartBoxMultipleOutline from './components/ChartBoxMultipleOutline.vue';
 import ChartBoxOutline from './components/ChartBoxOutline.vue';
 import ChartBoxPlusOutline from './components/ChartBoxPlusOutline.vue';
 import ChartBubble from './components/ChartBubble.vue';
@@ -2397,6 +2404,7 @@ import DiameterVariant from './components/DiameterVariant.vue';
 import Diamond from './components/Diamond.vue';
 import DiamondOutline from './components/DiamondOutline.vue';
 import DiamondStone from './components/DiamondStone.vue';
+import DiaperOutline from './components/DiaperOutline.vue';
 import Dice1 from './components/Dice1.vue';
 import Dice1Outline from './components/Dice1Outline.vue';
 import Dice2 from './components/Dice2.vue';
@@ -2508,6 +2516,7 @@ import DownloadCircleOutline from './components/DownloadCircleOutline.vue';
 import DownloadLock from './components/DownloadLock.vue';
 import DownloadLockOutline from './components/DownloadLockOutline.vue';
 import DownloadMultiple from './components/DownloadMultiple.vue';
+import DownloadMultipleOutline from './components/DownloadMultipleOutline.vue';
 import DownloadNetwork from './components/DownloadNetwork.vue';
 import DownloadNetworkOutline from './components/DownloadNetworkOutline.vue';
 import DownloadOff from './components/DownloadOff.vue';
@@ -2687,6 +2696,7 @@ import Ethereum from './components/Ethereum.vue';
 import Ethernet from './components/Ethernet.vue';
 import EthernetCable from './components/EthernetCable.vue';
 import EthernetCableOff from './components/EthernetCableOff.vue';
+import EthernetOff from './components/EthernetOff.vue';
 import EvPlugCcs1 from './components/EvPlugCcs1.vue';
 import EvPlugCcs2 from './components/EvPlugCcs2.vue';
 import EvPlugChademo from './components/EvPlugChademo.vue';
@@ -3982,6 +3992,59 @@ import InstrumentTriangle from './components/InstrumentTriangle.vue';
 import IntegratedCircuitChip from './components/IntegratedCircuitChip.vue';
 import InvertColors from './components/InvertColors.vue';
 import InvertColorsOff from './components/InvertColorsOff.vue';
+import Invoice from './components/Invoice.vue';
+import InvoiceArrowLeft from './components/InvoiceArrowLeft.vue';
+import InvoiceArrowLeftOutline from './components/InvoiceArrowLeftOutline.vue';
+import InvoiceArrowRight from './components/InvoiceArrowRight.vue';
+import InvoiceArrowRightOutline from './components/InvoiceArrowRightOutline.vue';
+import InvoiceCheck from './components/InvoiceCheck.vue';
+import InvoiceCheckOutline from './components/InvoiceCheckOutline.vue';
+import InvoiceClock from './components/InvoiceClock.vue';
+import InvoiceClockOutline from './components/InvoiceClockOutline.vue';
+import InvoiceEdit from './components/InvoiceEdit.vue';
+import InvoiceEditOutline from './components/InvoiceEditOutline.vue';
+import InvoiceExportOutline from './components/InvoiceExportOutline.vue';
+import InvoiceFast from './components/InvoiceFast.vue';
+import InvoiceFastOutline from './components/InvoiceFastOutline.vue';
+import InvoiceImport from './components/InvoiceImport.vue';
+import InvoiceImportOutline from './components/InvoiceImportOutline.vue';
+import InvoiceList from './components/InvoiceList.vue';
+import InvoiceListOutline from './components/InvoiceListOutline.vue';
+import InvoiceMinus from './components/InvoiceMinus.vue';
+import InvoiceMinusOutline from './components/InvoiceMinusOutline.vue';
+import InvoiceMultiple from './components/InvoiceMultiple.vue';
+import InvoiceMultipleOutline from './components/InvoiceMultipleOutline.vue';
+import InvoiceOutline from './components/InvoiceOutline.vue';
+import InvoicePlus from './components/InvoicePlus.vue';
+import InvoicePlusOutline from './components/InvoicePlusOutline.vue';
+import InvoiceRemove from './components/InvoiceRemove.vue';
+import InvoiceRemoveOutline from './components/InvoiceRemoveOutline.vue';
+import InvoiceSend from './components/InvoiceSend.vue';
+import InvoiceSendOutline from './components/InvoiceSendOutline.vue';
+import InvoiceText from './components/InvoiceText.vue';
+import InvoiceTextArrowLeft from './components/InvoiceTextArrowLeft.vue';
+import InvoiceTextArrowLeftOutline from './components/InvoiceTextArrowLeftOutline.vue';
+import InvoiceTextArrowRight from './components/InvoiceTextArrowRight.vue';
+import InvoiceTextArrowRightOutline from './components/InvoiceTextArrowRightOutline.vue';
+import InvoiceTextCheck from './components/InvoiceTextCheck.vue';
+import InvoiceTextCheckOutline from './components/InvoiceTextCheckOutline.vue';
+import InvoiceTextClock from './components/InvoiceTextClock.vue';
+import InvoiceTextClockOutline from './components/InvoiceTextClockOutline.vue';
+import InvoiceTextEdit from './components/InvoiceTextEdit.vue';
+import InvoiceTextEditOutline from './components/InvoiceTextEditOutline.vue';
+import InvoiceTextFast from './components/InvoiceTextFast.vue';
+import InvoiceTextFastOutline from './components/InvoiceTextFastOutline.vue';
+import InvoiceTextMinus from './components/InvoiceTextMinus.vue';
+import InvoiceTextMinusOutline from './components/InvoiceTextMinusOutline.vue';
+import InvoiceTextMultiple from './components/InvoiceTextMultiple.vue';
+import InvoiceTextMultipleOutline from './components/InvoiceTextMultipleOutline.vue';
+import InvoiceTextOutline from './components/InvoiceTextOutline.vue';
+import InvoiceTextPlus from './components/InvoiceTextPlus.vue';
+import InvoiceTextPlusOutline from './components/InvoiceTextPlusOutline.vue';
+import InvoiceTextRemove from './components/InvoiceTextRemove.vue';
+import InvoiceTextRemoveOutline from './components/InvoiceTextRemoveOutline.vue';
+import InvoiceTextSend from './components/InvoiceTextSend.vue';
+import InvoiceTextSendOutline from './components/InvoiceTextSendOutline.vue';
 import Iobroker from './components/Iobroker.vue';
 import Ip from './components/Ip.vue';
 import IpNetwork from './components/IpNetwork.vue';
@@ -4619,10 +4682,16 @@ import MotorbikeElectric from './components/MotorbikeElectric.vue';
 import MotorbikeOff from './components/MotorbikeOff.vue';
 import Mouse from './components/Mouse.vue';
 import MouseBluetooth from './components/MouseBluetooth.vue';
+import MouseLeftClick from './components/MouseLeftClick.vue';
+import MouseLeftClickOutline from './components/MouseLeftClickOutline.vue';
 import MouseMoveDown from './components/MouseMoveDown.vue';
 import MouseMoveUp from './components/MouseMoveUp.vue';
 import MouseMoveVertical from './components/MouseMoveVertical.vue';
 import MouseOff from './components/MouseOff.vue';
+import MouseOutline from './components/MouseOutline.vue';
+import MouseRightClick from './components/MouseRightClick.vue';
+import MouseRightClickOutline from './components/MouseRightClickOutline.vue';
+import MouseScrollWheel from './components/MouseScrollWheel.vue';
 import MouseVariant from './components/MouseVariant.vue';
 import MouseVariantOff from './components/MouseVariantOff.vue';
 import MoveResize from './components/MoveResize.vue';
@@ -5410,6 +5479,7 @@ import ProgressPencil from './components/ProgressPencil.vue';
 import ProgressQuestion from './components/ProgressQuestion.vue';
 import ProgressStar from './components/ProgressStar.vue';
 import ProgressStarFourPoints from './components/ProgressStarFourPoints.vue';
+import ProgressTag from './components/ProgressTag.vue';
 import ProgressUpload from './components/ProgressUpload.vue';
 import ProgressWrench from './components/ProgressWrench.vue';
 import Projector from './components/Projector.vue';
@@ -6404,6 +6474,7 @@ import SwapHorizontal from './components/SwapHorizontal.vue';
 import SwapHorizontalBold from './components/SwapHorizontalBold.vue';
 import SwapHorizontalCircle from './components/SwapHorizontalCircle.vue';
 import SwapHorizontalCircleOutline from './components/SwapHorizontalCircleOutline.vue';
+import SwapHorizontalHidden from './components/SwapHorizontalHidden.vue';
 import SwapHorizontalVariant from './components/SwapHorizontalVariant.vue';
 import SwapVertical from './components/SwapVertical.vue';
 import SwapVerticalBold from './components/SwapVerticalBold.vue';
@@ -6918,6 +6989,7 @@ import UmbrellaClosed from './components/UmbrellaClosed.vue';
 import UmbrellaClosedOutline from './components/UmbrellaClosedOutline.vue';
 import UmbrellaClosedVariant from './components/UmbrellaClosedVariant.vue';
 import UmbrellaOutline from './components/UmbrellaOutline.vue';
+import UnderwearOutline from './components/UnderwearOutline.vue';
 import Undo from './components/Undo.vue';
 import UndoVariant from './components/UndoVariant.vue';
 import UnfoldLessHorizontal from './components/UnfoldLessHorizontal.vue';
@@ -6933,9 +7005,14 @@ import Unity from './components/Unity.vue';
 import Unreal from './components/Unreal.vue';
 import Update from './components/Update.vue';
 import Upload from './components/Upload.vue';
+import UploadBox from './components/UploadBox.vue';
+import UploadBoxOutline from './components/UploadBoxOutline.vue';
+import UploadCircle from './components/UploadCircle.vue';
+import UploadCircleOutline from './components/UploadCircleOutline.vue';
 import UploadLock from './components/UploadLock.vue';
 import UploadLockOutline from './components/UploadLockOutline.vue';
 import UploadMultiple from './components/UploadMultiple.vue';
+import UploadMultipleOutline from './components/UploadMultipleOutline.vue';
 import UploadNetwork from './components/UploadNetwork.vue';
 import UploadNetworkOutline from './components/UploadNetworkOutline.vue';
 import UploadOff from './components/UploadOff.vue';
@@ -7199,6 +7276,9 @@ import WeatherHurricane from './components/WeatherHurricane.vue';
 import WeatherHurricaneOutline from './components/WeatherHurricaneOutline.vue';
 import WeatherLightning from './components/WeatherLightning.vue';
 import WeatherLightningRainy from './components/WeatherLightningRainy.vue';
+import WeatherMoonset from './components/WeatherMoonset.vue';
+import WeatherMoonsetDown from './components/WeatherMoonsetDown.vue';
+import WeatherMoonsetUp from './components/WeatherMoonsetUp.vue';
 import WeatherNight from './components/WeatherNight.vue';
 import WeatherNightPartlyCloudy from './components/WeatherNightPartlyCloudy.vue';
 import WeatherPartlyCloudy from './components/WeatherPartlyCloudy.vue';
@@ -7395,9 +7475,12 @@ export {
 	AccountBadge,
 	AccountBadgeOutline,
 	AccountBox,
+	AccountBoxEditOutline,
+	AccountBoxMinusOutline,
 	AccountBoxMultiple,
 	AccountBoxMultipleOutline,
 	AccountBoxOutline,
+	AccountBoxPlusOutline,
 	AccountCancel,
 	AccountCancelOutline,
 	AccountCard,
@@ -8399,10 +8482,12 @@ export {
 	BookOffOutline,
 	BookOpen,
 	BookOpenBlankVariant,
+	BookOpenBlankVariantOutline,
 	BookOpenOutline,
 	BookOpenPageVariant,
 	BookOpenPageVariantOutline,
 	BookOpenVariant,
+	BookOpenVariantOutline,
 	BookOutline,
 	BookPlay,
 	BookPlayOutline,
@@ -8969,6 +9054,8 @@ export {
 	ChartBellCurve,
 	ChartBellCurveCumulative,
 	ChartBox,
+	ChartBoxMultiple,
+	ChartBoxMultipleOutline,
 	ChartBoxOutline,
 	ChartBoxPlusOutline,
 	ChartBubble,
@@ -9766,6 +9853,7 @@ export {
 	Diamond,
 	DiamondOutline,
 	DiamondStone,
+	DiaperOutline,
 	Dice1,
 	Dice1Outline,
 	Dice2,
@@ -9877,6 +9965,7 @@ export {
 	DownloadLock,
 	DownloadLockOutline,
 	DownloadMultiple,
+	DownloadMultipleOutline,
 	DownloadNetwork,
 	DownloadNetworkOutline,
 	DownloadOff,
@@ -10056,6 +10145,7 @@ export {
 	Ethernet,
 	EthernetCable,
 	EthernetCableOff,
+	EthernetOff,
 	EvPlugCcs1,
 	EvPlugCcs2,
 	EvPlugChademo,
@@ -11351,6 +11441,59 @@ export {
 	IntegratedCircuitChip,
 	InvertColors,
 	InvertColorsOff,
+	Invoice,
+	InvoiceArrowLeft,
+	InvoiceArrowLeftOutline,
+	InvoiceArrowRight,
+	InvoiceArrowRightOutline,
+	InvoiceCheck,
+	InvoiceCheckOutline,
+	InvoiceClock,
+	InvoiceClockOutline,
+	InvoiceEdit,
+	InvoiceEditOutline,
+	InvoiceExportOutline,
+	InvoiceFast,
+	InvoiceFastOutline,
+	InvoiceImport,
+	InvoiceImportOutline,
+	InvoiceList,
+	InvoiceListOutline,
+	InvoiceMinus,
+	InvoiceMinusOutline,
+	InvoiceMultiple,
+	InvoiceMultipleOutline,
+	InvoiceOutline,
+	InvoicePlus,
+	InvoicePlusOutline,
+	InvoiceRemove,
+	InvoiceRemoveOutline,
+	InvoiceSend,
+	InvoiceSendOutline,
+	InvoiceText,
+	InvoiceTextArrowLeft,
+	InvoiceTextArrowLeftOutline,
+	InvoiceTextArrowRight,
+	InvoiceTextArrowRightOutline,
+	InvoiceTextCheck,
+	InvoiceTextCheckOutline,
+	InvoiceTextClock,
+	InvoiceTextClockOutline,
+	InvoiceTextEdit,
+	InvoiceTextEditOutline,
+	InvoiceTextFast,
+	InvoiceTextFastOutline,
+	InvoiceTextMinus,
+	InvoiceTextMinusOutline,
+	InvoiceTextMultiple,
+	InvoiceTextMultipleOutline,
+	InvoiceTextOutline,
+	InvoiceTextPlus,
+	InvoiceTextPlusOutline,
+	InvoiceTextRemove,
+	InvoiceTextRemoveOutline,
+	InvoiceTextSend,
+	InvoiceTextSendOutline,
 	Iobroker,
 	Ip,
 	IpNetwork,
@@ -11988,10 +12131,16 @@ export {
 	MotorbikeOff,
 	Mouse,
 	MouseBluetooth,
+	MouseLeftClick,
+	MouseLeftClickOutline,
 	MouseMoveDown,
 	MouseMoveUp,
 	MouseMoveVertical,
 	MouseOff,
+	MouseOutline,
+	MouseRightClick,
+	MouseRightClickOutline,
+	MouseScrollWheel,
 	MouseVariant,
 	MouseVariantOff,
 	MoveResize,
@@ -12779,6 +12928,7 @@ export {
 	ProgressQuestion,
 	ProgressStar,
 	ProgressStarFourPoints,
+	ProgressTag,
 	ProgressUpload,
 	ProgressWrench,
 	Projector,
@@ -13773,6 +13923,7 @@ export {
 	SwapHorizontalBold,
 	SwapHorizontalCircle,
 	SwapHorizontalCircleOutline,
+	SwapHorizontalHidden,
 	SwapHorizontalVariant,
 	SwapVertical,
 	SwapVerticalBold,
@@ -14287,6 +14438,7 @@ export {
 	UmbrellaClosedOutline,
 	UmbrellaClosedVariant,
 	UmbrellaOutline,
+	UnderwearOutline,
 	Undo,
 	UndoVariant,
 	UnfoldLessHorizontal,
@@ -14302,9 +14454,14 @@ export {
 	Unreal,
 	Update,
 	Upload,
+	UploadBox,
+	UploadBoxOutline,
+	UploadCircle,
+	UploadCircleOutline,
 	UploadLock,
 	UploadLockOutline,
 	UploadMultiple,
+	UploadMultipleOutline,
 	UploadNetwork,
 	UploadNetworkOutline,
 	UploadOff,
@@ -14568,6 +14725,9 @@ export {
 	WeatherHurricaneOutline,
 	WeatherLightning,
 	WeatherLightningRainy,
+	WeatherMoonset,
+	WeatherMoonsetDown,
+	WeatherMoonsetUp,
 	WeatherNight,
 	WeatherNightPartlyCloudy,
 	WeatherPartlyCloudy,
