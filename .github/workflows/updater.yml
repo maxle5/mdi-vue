@@ -1,0 +1,23 @@
+name: updater
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs at 12 AM UTC every day
+
+jobs:
+  updater:
+    runs-on: ubuntu-24.04
+    
+    steps:
+      - id: theirs
+        name: Determine latest @mdi/svg version
+        run: |
+          echo "version=$(npm show @mdi/svg version)" >> "$GITHUB_OUTPUT"
+      
+      - name: Determine current @maxle5/mdi-vue version
+        uses: rexdefuror/read-package-json@v1.0.5        
+
+      - name: Update
+        if: ${{ env.PACKAGE_VERSION != steps.theirs.outputs.version }}        
+        run: |
+          echo outdated!!!"
