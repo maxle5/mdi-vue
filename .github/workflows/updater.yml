@@ -42,7 +42,10 @@ jobs:
         if: ${{ env.PACKAGE_VERSION != steps.theirs.outputs.version }}  
         uses: peter-evans/create-pull-request@v6
         with: 
+          title: "task: updated @mdi/svg to ${{ steps.theirs.outputs.version }}"
+          body: "Updated to the latest version of [@mdi/svg](https://github.com/Templarian/MaterialDesign-SVG)"
           branch: update-mdi
           delete-branch: true
           commit-message: |
-            updated to latest mdi
+            updated @mdi/svg to v${{ steps.theirs.outputs.version  }}
+          
