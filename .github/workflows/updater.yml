@@ -40,5 +40,7 @@ jobs:
         if: ${{ env.PACKAGE_VERSION != steps.theirs.outputs.version }}  
         uses: peter-evans/create-pull-request@v6
         with: 
+          branch: update-mdi
+          delete-branch: true
           commit-message: |
-            updated to ${{ steps.theirs.outputs.version }}
+            updated to latest mdi
