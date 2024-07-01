@@ -1,8 +1,8 @@
-import { mkdir, readdir, readFile, writeFile } from "fs/promises";
+import { mkdir, writeFile } from "fs/promises";
 import { fileURLToPath } from "url";
 import { dirname, resolve } from "path";
-import { XMLParser } from "fast-xml-parser";
 import { rimraf } from "rimraf";
+import mdiIcons from "@mdi/js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -43,61 +43,38 @@ test("{{name}} snapshot", () => {
 });
 `;
 
-const parser = new XMLParser({
-  ignoreAttributes: false,
-  attributeNamePrefix: "@_",
-});
-
-const getIconName = (file) =>
-  "Mdi" +
-  file
-    .split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-    .join("")
-    .replace(".svg", "");
-
 // refresh components
 await rimraf(resolve(__dirname, "src/components"));
 await mkdir(resolve(__dirname, "src/components"));
 
 // generate vue components from mdi svg files
-const files = await readdir(resolve(__dirname, "node_modules/@mdi/svg/svg"));
-for (const file of files) {
-  var svgContent = await readFile(
-    resolve(__dirname, "node_modules/@mdi/svg/svg", file),
-    "utf-8"
-  );
+const icons = Object.entries(mdiIcons).map(([name, path]) => ({
+  path,
+  name: name[0].toUpperCase() + name.slice(1),
+}));
 
-  const iconName = getIconName(file);
-  const iconPath = parser.parse(svgContent).svg.path["@_d"];
-
+for (const icon of icons) {
   await writeFile(
-    resolve(__dirname, "src/components", iconName + ".vue"),
+    resolve(__dirname, "src/components", icon.name + ".vue"),
     componentTemplate
-      .replace(/{{path}}/g, iconPath)
-      .replace(/{{name}}/g, iconName)
+      .replace(/{{path}}/g, icon.path)
+      .replace(/{{name}}/g, icon.name)
   );
 
   await writeFile(
-    resolve(__dirname, "tests/components", iconName + ".spec.ts"),
-    testTemplate.replace(/{{name}}/g, iconName)
+    resolve(__dirname, "tests/components", icon.name + ".spec.ts"),
+    testTemplate.replace(/{{name}}/g, icon.name)
   );
 }
 
 // generate main.ts file
-const imports = files
-  .map((file) => {
-    const iconName = getIconName(file);
-    return `import ${iconName} from './components/${iconName}.vue';`;
-  })
+const imports = icons
+  .map((icon) => `import ${icon.name} from './components/${icon.name}.vue';`)
   .sort()
   .join("\n");
 
-var exports = files
-  .map((file) => {
-    const iconName = getIconName(file);
-    return `	${iconName},`;
-  })
+var exports = icons
+  .map((icon) => `	${icon.name},`)
   .sort()
   .join("\n");
 

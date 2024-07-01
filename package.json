@@ -46,11 +46,10 @@
     "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@mdi/svg": "^7.4.47",
+    "@mdi/js": "^7.4.47",
     "@types/node": "^20.14.9",
     "@vitejs/plugin-vue": "^4.1.0",
     "@vue/test-utils": "^2.4.6",
-    "fast-xml-parser": "^4.4.0",
     "happy-dom": "^14.12.3",
     "path": "^0.12.7",
     "rimraf": "^5.0.7",

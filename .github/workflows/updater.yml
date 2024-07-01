@@ -16,9 +16,9 @@ jobs:
         uses: actions/checkout@v4.1.7
     
       - id: theirs
-        name: Determine latest @mdi/svg version
+        name: Determine latest @mdi/js version
         run: |
-          echo "version=$(npm show @mdi/svg version)" >> "$GITHUB_OUTPUT"
+          echo "version=$(npm show @mdi/js version)" >> "$GITHUB_OUTPUT"
       
       - name: Determine current @maxle5/mdi-vue version
         uses: rexdefuror/read-package-json@v1.0.5        
@@ -34,7 +34,7 @@ jobs:
       - name: Update/Create vue components
         if: ${{ env.PACKAGE_VERSION != steps.theirs.outputs.version }}        
         run: |
-          npm install @mdi/svg@latest -D
+          npm install @mdi/js@latest -D
           npm install
           npm run generate
 
@@ -42,10 +42,10 @@ jobs:
         if: ${{ env.PACKAGE_VERSION != steps.theirs.outputs.version }}  
         uses: peter-evans/create-pull-request@v6
         with: 
-          title: "task: updated @mdi/svg to ${{ steps.theirs.outputs.version }}"
-          body: "Updated to the latest version of [@mdi/svg](https://github.com/Templarian/MaterialDesign-SVG)"
+          title: "task: updated @mdi/js to ${{ steps.theirs.outputs.version }}"
+          body: "Updated to the latest version of [@mdi/js](https://github.com/Templarian/MaterialDesign-JS)"
           branch: update-mdi
           delete-branch: true
           commit-message: |
-            updated @mdi/svg to v${{ steps.theirs.outputs.version  }}
+            updated @mdi/js to v${{ steps.theirs.outputs.version  }}
           
