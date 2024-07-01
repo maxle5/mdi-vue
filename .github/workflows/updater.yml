@@ -29,13 +29,12 @@ jobs:
           version: ${{ steps.theirs.outputs.version }}
           git-tag-version: false
 
-      - name: Build @maxle5/mdi-vue
+      - name: Update/Create vue components
         if: ${{ env.PACKAGE_VERSION != steps.theirs.outputs.version }}        
         run: |
           npm install @mdi/svg@latest -D
           npm install
           npm run generate
-          npm run build
 
       - name: Create Pull Request
         if: ${{ env.PACKAGE_VERSION != steps.theirs.outputs.version }}  
