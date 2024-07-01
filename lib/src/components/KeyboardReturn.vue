@@ -1,11 +1,13 @@
 <template>
     <svg :width="size" :height="size" :viewBox="viewbox">
-        <path d="M19,7V11H5.83L9.41,7.41L8,6L2,12L8,18L9.41,16.58L5.83,13H21V7H19Z" xmlns="http://www.w3.org/2000/svg" />
+        <path d="M19,7V11H5.83L9.41,7.41L8,6L2,12L8,18L9.41,16.58L5.83,13H21V7H19Z" style="fill: currentColor" />
     </svg>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
     name: "KeyboardReturn",
     props: {
         size: { 
@@ -17,11 +19,5 @@ export default {
             default: "0 0 24 24" 
         },
     },
-}
+})
 </script>
-
-<style scoped>
-    path {
-        fill: currentColor;
-    }
-</style>

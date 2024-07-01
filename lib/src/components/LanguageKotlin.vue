@@ -1,11 +1,13 @@
 <template>
     <svg :width="size" :height="size" :viewBox="viewbox">
-        <path d="M2 2H22L12 12L22 22H2Z" xmlns="http://www.w3.org/2000/svg" />
+        <path d="M2 2H22L12 12L22 22H2Z" style="fill: currentColor" />
     </svg>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
     name: "LanguageKotlin",
     props: {
         size: { 
@@ -17,11 +19,5 @@ export default {
             default: "0 0 24 24" 
         },
     },
-}
+})
 </script>
-
-<style scoped>
-    path {
-        fill: currentColor;
-    }
-</style>

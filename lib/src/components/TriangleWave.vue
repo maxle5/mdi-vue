@@ -1,11 +1,13 @@
 <template>
     <svg :width="size" :height="size" :viewBox="viewbox">
-        <path d="M22 12L17 22L7.1 6.04L4.24 12H2L7 2L16.9 17.96L19.76 12H22Z" xmlns="http://www.w3.org/2000/svg" />
+        <path d="M22 12L17 22L7.1 6.04L4.24 12H2L7 2L16.9 17.96L19.76 12H22Z" style="fill: currentColor" />
     </svg>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
     name: "TriangleWave",
     props: {
         size: { 
@@ -17,11 +19,5 @@ export default {
             default: "0 0 24 24" 
         },
     },
-}
+})
 </script>
-
-<style scoped>
-    path {
-        fill: currentColor;
-    }
-</style>

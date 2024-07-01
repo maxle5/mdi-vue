@@ -1,11 +1,13 @@
 <template>
     <svg :width="size" :height="size" :viewBox="viewbox">
-        <path d="M19,12L12,22L5,12L12,2" xmlns="http://www.w3.org/2000/svg" />
+        <path d="M19,12L12,22L5,12L12,2" style="fill: currentColor" />
     </svg>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
     name: "CardsDiamond",
     props: {
         size: { 
@@ -17,11 +19,5 @@ export default {
             default: "0 0 24 24" 
         },
     },
-}
+})
 </script>
-
-<style scoped>
-    path {
-        fill: currentColor;
-    }
-</style>

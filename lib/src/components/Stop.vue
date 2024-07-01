@@ -1,11 +1,13 @@
 <template>
     <svg :width="size" :height="size" :viewBox="viewbox">
-        <path d="M18,18H6V6H18V18Z" xmlns="http://www.w3.org/2000/svg" />
+        <path d="M18,18H6V6H18V18Z" style="fill: currentColor" />
     </svg>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
     name: "Stop",
     props: {
         size: { 
@@ -17,11 +19,5 @@ export default {
             default: "0 0 24 24" 
         },
     },
-}
+})
 </script>
-
-<style scoped>
-    path {
-        fill: currentColor;
-    }
-</style>

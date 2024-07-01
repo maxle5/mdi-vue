@@ -1,11 +1,13 @@
 <template>
     <svg :width="size" :height="size" :viewBox="viewbox">
-        <path d="M8,18H17V5H8M18,5V18H21V5M4,18H7V5H4V18Z" xmlns="http://www.w3.org/2000/svg" />
+        <path d="M8,18H17V5H8M18,5V18H21V5M4,18H7V5H4V18Z" style="fill: currentColor" />
     </svg>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
     name: "ViewArray",
     props: {
         size: { 
@@ -17,11 +19,5 @@ export default {
             default: "0 0 24 24" 
         },
     },
-}
+})
 </script>
-
-<style scoped>
-    path {
-        fill: currentColor;
-    }
-</style>

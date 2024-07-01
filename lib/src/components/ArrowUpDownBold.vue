@@ -1,11 +1,13 @@
 <template>
     <svg :width="size" :height="size" :viewBox="viewbox">
-        <path d="M10,8H6L12,2L18,8H14V16H18L12,22L6,16H10V8Z" xmlns="http://www.w3.org/2000/svg" />
+        <path d="M10,8H6L12,2L18,8H14V16H18L12,22L6,16H10V8Z" style="fill: currentColor" />
     </svg>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
     name: "ArrowUpDownBold",
     props: {
         size: { 
@@ -17,11 +19,5 @@ export default {
             default: "0 0 24 24" 
         },
     },
-}
+})
 </script>
-
-<style scoped>
-    path {
-        fill: currentColor;
-    }
-</style>

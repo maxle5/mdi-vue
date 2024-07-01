@@ -1,11 +1,13 @@
 <template>
     <svg :width="size" :height="size" :viewBox="viewbox">
-        <path d="M20 19V3H4V19H2V21H22V19H20M10 19V5H14V19H10Z" xmlns="http://www.w3.org/2000/svg" />
+        <path d="M20 19V3H4V19H2V21H22V19H20M10 19V5H14V19H10Z" style="fill: currentColor" />
     </svg>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
     name: "BlindsVertical",
     props: {
         size: { 
@@ -17,11 +19,5 @@ export default {
             default: "0 0 24 24" 
         },
     },
-}
+})
 </script>
-
-<style scoped>
-    path {
-        fill: currentColor;
-    }
-</style>

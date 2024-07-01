@@ -1,31 +1,56 @@
 {
-  "name": "@maxle5/mdi-vue",
+  "name": "mdi-vue",
   "version": "7.4.47",
-  "description": "Vue distribution for the Material Design Icons.",
   "type": "module",
-  "scripts": {
-    "build": "tsc -b && vite build"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxle5/mdi-vue.git"
   },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "material",
+    "icons",
+    "design",
+    "material-design-icons",
+    "vue3",
+    "vue",
+    "vuejs"
+  ],
   "files": [
-    "dist"
+    "dist",
+    "src/components/"
   ],
   "main": "./dist/mdi-vue.umd.cjs",
   "module": "./dist/mdi-vue.js",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/mdi-vue.js",
       "require": "./dist/mdi-vue.umd.cjs"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
     }
   },
   "dependencies": {
-    "vue": "^3.4.30"
+    "vue": "^3.0.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@babel/types": "^7.24.7",
-    "@vitejs/plugin-vue": "^5.0.5",
-    "typescript": "^5.2.2",
-    "vite": "^5.3.1",
-    "vite-plugin-dts": "^3.9.1",
-    "vue-tsc": "^2.0.22"
-  }
+    "@vitejs/plugin-vue": "^4.1.0",
+    "path": "^0.12.7",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.9",
+    "vite-plugin-dts": "^2.3.0",
+    "vue-tsc": "^2.0.24"
+  },
+  "license": "ISC",
+  "author": "Max Lefebvre"
 }

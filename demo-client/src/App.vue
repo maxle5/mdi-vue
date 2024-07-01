@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
-import { AbTesting, FileDocument } from '@maxle5/mdi-vue';
+import { FileDocument } from '@maxle5/mdi-vue';
+
 </script>
 
 <template>
@@ -13,8 +14,7 @@ import { AbTesting, FileDocument } from '@maxle5/mdi-vue';
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
-  <AbTesting />
-  <FileDocument :size="48" style="color: white" />
+  <FileDocument style="color: blue"/>
 </template>
 
 <style scoped>

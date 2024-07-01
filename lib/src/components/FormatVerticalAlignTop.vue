@@ -1,11 +1,13 @@
 <template>
     <svg :width="size" :height="size" :viewBox="viewbox">
-        <path d="M8,11H11V21H13V11H16L12,7L8,11M4,3V5H20V3H4Z" xmlns="http://www.w3.org/2000/svg" />
+        <path d="M8,11H11V21H13V11H16L12,7L8,11M4,3V5H20V3H4Z" style="fill: currentColor" />
     </svg>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
     name: "FormatVerticalAlignTop",
     props: {
         size: { 
@@ -17,11 +19,5 @@ export default {
             default: "0 0 24 24" 
         },
     },
-}
+})
 </script>
-
-<style scoped>
-    path {
-        fill: currentColor;
-    }
-</style>

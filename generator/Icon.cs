@@ -20,18 +20,20 @@ public class Icon
         // extract the path from the SVG content via xml parsing
         var xml = new XmlDocument();
         xml.LoadXml(svgContent);
-        var path = xml.GetElementsByTagName("path")[0]?.OuterXml ?? string.Empty;
+        var path = xml.GetElementsByTagName("path")[0]?.Attributes?["d"]?.Value ?? string.Empty;
 
         // format template
         return $$"""
         <template>
             <svg :width="size" :height="size" :viewBox="viewbox">
-                {{ path }}
+                <path d="{{ path }}" style="fill: currentColor" />
             </svg>
         </template>
 
-        <script>
-        export default {
+        <script lang="ts">
+        import { defineComponent } from 'vue';
+
+        export default defineComponent({
             name: "{{ StringFormatters.KebabToPascalCase(Name) }}",
             props: {
                 size: { 
@@ -43,14 +45,8 @@ public class Icon
                     default: "0 0 24 24" 
                 },
             },
-        }
+        })
         </script>
-
-        <style scoped>
-            path {
-                fill: currentColor;
-            }
-        </style>
         """;
     }
 }

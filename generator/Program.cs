@@ -31,7 +31,7 @@ internal class Program
             return $"import {fileName} from './components/{fileName}.vue';";;
         }));
         var exports = string.Join(Environment.NewLine, manifest.Select(icon => $"\t{StringFormatters.KebabToPascalCase(icon.Name)},"));
-        using var writer = new StreamWriter(Path.Combine(libraryPath, "src", "main.ts"));
+        using var writer = new StreamWriter(Path.Combine(libraryPath, "src", "index.ts"));
         await writer.WriteLineAsync(imports);
         writer.WriteLine();
         writer.WriteLine("export {");

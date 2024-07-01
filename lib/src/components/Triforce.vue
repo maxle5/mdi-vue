@@ -1,11 +1,13 @@
 <template>
     <svg :width="size" :height="size" :viewBox="viewbox">
-        <path d="M1.5,21L12,3.5L22.5,21H1.5M12,21L17,12H7L12,21Z" xmlns="http://www.w3.org/2000/svg" />
+        <path d="M1.5,21L12,3.5L22.5,21H1.5M12,21L17,12H7L12,21Z" style="fill: currentColor" />
     </svg>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
     name: "Triforce",
     props: {
         size: { 
@@ -17,11 +19,5 @@ export default {
             default: "0 0 24 24" 
         },
     },
-}
+})
 </script>
-
-<style scoped>
-    path {
-        fill: currentColor;
-    }
-</style>

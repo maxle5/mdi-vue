@@ -1,11 +1,13 @@
 <template>
     <svg :width="size" :height="size" :viewBox="viewbox">
-        <path d="M12,7L17,17H7L12,7M3,3H21V5H3V3M3,19H21V21H3V19Z" xmlns="http://www.w3.org/2000/svg" />
+        <path d="M12,7L17,17H7L12,7M3,3H21V5H3V3M3,19H21V21H3V19Z" style="fill: currentColor" />
     </svg>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
     name: "FormatWrapTopBottom",
     props: {
         size: { 
@@ -17,11 +19,5 @@ export default {
             default: "0 0 24 24" 
         },
     },
-}
+})
 </script>
-
-<style scoped>
-    path {
-        fill: currentColor;
-    }
-</style>

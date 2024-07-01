@@ -1,27 +1,28 @@
-import { defineConfig } from "vite";
-import { resolve } from "path";
 import vue from "@vitejs/plugin-vue";
+import * as path from "path";
+import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(), dts()],
   build: {
     lib: {
+      entry: path.resolve(__dirname, "src/index.ts"),
       name: "mdi-vue",
-      entry: resolve(__dirname, "src/main.ts"),
+      fileName: "mdi-vue",
     },
     rollupOptions: {
-      // make sure to externalize deps that shouldn't be bundled
-      // into your library
       external: ["vue"],
       output: {
-        // Provide global variables to use in the UMD build
-        // for externalized deps
         globals: {
           vue: "Vue",
         },
       },
+    },
+  },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
     },
   },
 });

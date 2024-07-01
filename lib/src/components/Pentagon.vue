@@ -1,11 +1,13 @@
 <template>
     <svg :width="size" :height="size" :viewBox="viewbox">
-        <path d="M12,2.5L2,9.8L5.8,21.5H18.2L22,9.8L12,2.5Z" xmlns="http://www.w3.org/2000/svg" />
+        <path d="M12,2.5L2,9.8L5.8,21.5H18.2L22,9.8L12,2.5Z" style="fill: currentColor" />
     </svg>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
     name: "Pentagon",
     props: {
         size: { 
@@ -17,11 +19,5 @@ export default {
             default: "0 0 24 24" 
         },
     },
-}
+})
 </script>
-
-<style scoped>
-    path {
-        fill: currentColor;
-    }
-</style>

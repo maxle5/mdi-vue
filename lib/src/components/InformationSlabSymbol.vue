@@ -1,11 +1,13 @@
 <template>
     <svg :width="size" :height="size" :viewBox="viewbox">
-        <path d="M13 9H11V7H13V9M14 15V17H10V15H11V13H10V11H13V15H14Z" xmlns="http://www.w3.org/2000/svg" />
+        <path d="M13 9H11V7H13V9M14 15V17H10V15H11V13H10V11H13V15H14Z" style="fill: currentColor" />
     </svg>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
     name: "InformationSlabSymbol",
     props: {
         size: { 
@@ -17,11 +19,5 @@ export default {
             default: "0 0 24 24" 
         },
     },
-}
+})
 </script>
-
-<style scoped>
-    path {
-        fill: currentColor;
-    }
-</style>
