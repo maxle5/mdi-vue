@@ -1,4 +1,4 @@
-# Vue - Material Design Icons
+# Vue - Material Design Icons (work in progress)
 
 A collection of Vue single-file components (compatible with Vue 2 & 3) for rendering Material Design Icons. This library sources its icons daily from [@mdi/js](https://github.com/Templarian/MaterialDesign-JS) to ensure comprehensive icon coverage.
 
