@@ -1,6 +1,7 @@
 {
   "name": "mdi-vue",
   "version": "7.4.47",
+  "type": "module",
   "main": "dist/mdi-vue.umd.js",
   "module": "dist/mdi-vue.es.js",
   "types": "dist/index.d.ts",
