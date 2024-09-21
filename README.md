@@ -27,7 +27,7 @@ With **full treeshaking support**, your application will only include the icons 
      MdiMenu;
    }
    ```
-   > Note: [Vite](https://vitejs.dev/) or [WebPack](https://webpack.js.org) will tree shake unused icons.
+   > Note: [Vite](https://vitejs.dev/) and [WebPack](https://webpack.js.org) will tree shake unused icons.
 
    **OR**
 

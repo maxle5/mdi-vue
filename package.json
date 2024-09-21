@@ -1,5 +1,5 @@
 {
-  "name": "mdi-vue",
+  "name": "@maxle5/mdi-vue",
   "version": "7.4.47",
   "type": "module",
   "main": "dist/mdi-vue.umd.js",
@@ -8,6 +8,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maxle5/mdi-vue.git"

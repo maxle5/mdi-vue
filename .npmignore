@@ -1,0 +1,8 @@
+src/
+tests/
+examples/
+vite.config.ts
+tsconfig.json
+node_modules/
+generate.js
+*.log

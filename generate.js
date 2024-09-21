@@ -66,9 +66,7 @@ for (const icon of icons) {
 const main = icons
   .map(
     (icon) =>
-      `export { default as ${icon.name.slice(3)} } from './components/${
-        icon.name
-      }.vue';`
+      `export { default as ${icon.name} } from './components/${icon.name}.vue';`
   )
   .sort()
   .join("\n");
