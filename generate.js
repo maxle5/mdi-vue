@@ -63,22 +63,14 @@ for (const icon of icons) {
 }
 
 // generate main.ts file
-const imports = icons
-  .map((icon) => `import ${icon.name} from './components/${icon.name}.vue';`)
+const main = icons
+  .map(
+    (icon) =>
+      `export { default as ${icon.name.slice(3)} } from './components/${
+        icon.name
+      }.vue';`
+  )
   .sort()
   .join("\n");
 
-var exports = icons
-  .map((icon) => `	${icon.name},`)
-  .sort()
-  .join("\n");
-
-await writeFile(
-  resolve(__dirname, "src/index.ts"),
-  `${imports}
-
-export {
-${exports.slice(0, -1)}
-};
-  `
-);
+await writeFile(resolve(__dirname, "src/index.ts"), main);

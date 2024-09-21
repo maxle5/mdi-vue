@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@maxle5/mdi-vue": "file:../../",
+    "@maxle5/mdi-vue": "file:D:/Source/mdi-vue",
     "vue": "^3.4.29"
   },
   "devDependencies": {

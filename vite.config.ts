@@ -1,16 +1,15 @@
 /// <reference types="vitest" />
 import { defineConfig } from "vite";
-import path from "path";
 import vue from "@vitejs/plugin-vue";
-import dts from "vite-plugin-dts";
+import { resolve } from "path";
 
 export default defineConfig({
-  plugins: [vue(), dts()],
   build: {
+    emptyOutDir: false,
     lib: {
-      entry: path.resolve(__dirname, "src/index.ts"),
-      name: "mdi-vue",
-      fileName: "mdi-vue",
+      entry: resolve(__dirname, "src/index.ts"),
+      name: "@maxle5/mdi-vue",
+      fileName: (format) => `mdi-vue.${format}.js`,
     },
     rollupOptions: {
       external: ["vue"],
@@ -21,13 +20,10 @@ export default defineConfig({
       },
     },
   },
-  test: {
-    globals: true,
-    environment: "happy-dom",
-  },
+  plugins: [vue()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src"),
+      "@": resolve(__dirname, "src"),
     },
   },
 });

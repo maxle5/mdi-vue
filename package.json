@@ -1,7 +1,12 @@
 {
   "name": "mdi-vue",
   "version": "7.4.47",
-  "type": "module",
+  "main": "dist/mdi-vue.umd.js",
+  "module": "dist/mdi-vue.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maxle5/mdi-vue.git"
@@ -22,23 +27,6 @@
     "vue",
     "vuejs"
   ],
-  "files": [
-    "dist",
-    "src/components/"
-  ],
-  "main": "./dist/mdi-vue.umd.cjs",
-  "module": "./dist/mdi-vue.js",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/mdi-vue.js",
-      "require": "./dist/mdi-vue.umd.cjs"
-    },
-    "./dist/style.css": {
-      "import": "./dist/style.css",
-      "require": "./dist/style.css"
-    }
-  },
   "dependencies": {
     "vue": "^3.0.0"
   },
@@ -46,7 +34,7 @@
     "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@mdi/js": "^7.4.47",
+    "@mdi/js": "7.4.47",
     "@types/node": "^20.14.9",
     "@vitejs/plugin-vue": "^4.1.0",
     "@vue/test-utils": "^2.4.6",
