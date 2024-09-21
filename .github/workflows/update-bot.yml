@@ -1,4 +1,4 @@
-name: updater
+name: update-bot
 
 on:
   workflow_dispatch:

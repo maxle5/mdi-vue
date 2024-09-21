@@ -1,7 +1,7 @@
-name: cd
+name: integration
 
 on:
-  push:
+  pull_request:
     branches: [ "main" ]
 
 jobs:
@@ -13,13 +13,15 @@ jobs:
         
     steps:
     - uses: actions/checkout@v4
+    
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build
-    - run: npm run test
-    # TODO: npm publish
-    # TODO: git tag
+        
+    - name: Build & test
+      run: |
+        npm ci
+        npm run build
+        npm run test

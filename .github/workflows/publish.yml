@@ -1,0 +1,40 @@
+name: publish
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x, 20.x, 22.x]
+        
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    
+    - name: Build & Test
+      run: |
+        npm ci
+        npm run build
+        npm run test
+        
+    - name: Git Tag
+      id: git_tag
+      uses: Klemensas/action-autotag@stable
+      with:
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        tag_prefix: "v"
+
+    - name: Publish npm package
+      if: ${{ steps.git_tag.tagname != ''}}        
+      run: npm publish
+      env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

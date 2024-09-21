@@ -16,7 +16,6 @@
     "url": "git+https://github.com/maxle5/mdi-vue.git"
   },
   "scripts": {
-    "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "test": "vitest run --dom",
