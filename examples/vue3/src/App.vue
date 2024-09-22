@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { MdiFileDocument, MdiCloudUploadOutline, MdiAbacus, MdiCar2Plus } from '@maxle5/mdi-vue';
+import { MdiFileDocument, MdiCloudUploadOutline, MdiAbacus, MdiCar2Plus } from '@maxle5/mdi-vue3';
 
 const size = ref(64);
 </script>

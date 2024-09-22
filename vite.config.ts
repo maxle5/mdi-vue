@@ -8,8 +8,8 @@ export default defineConfig({
     emptyOutDir: false,
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
-      name: "@maxle5/mdi-vue",
-      fileName: (format) => `mdi-vue.${format}.js`,
+      name: "@maxle5/mdi-vue3",
+      fileName: (format) => `mdi-vue3.${format}.js`,
     },
     rollupOptions: {
       external: ["vue"],

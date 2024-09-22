@@ -1,9 +1,9 @@
 {
-  "name": "@maxle5/mdi-vue",
+  "name": "@maxle5/mdi-vue3",
   "version": "7.4.47",
   "type": "module",
-  "main": "dist/mdi-vue.umd.js",
-  "module": "dist/mdi-vue.es.js",
+  "main": "dist/mdi-vue3.umd.js",
+  "module": "dist/mdi-vue3.es.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maxle5/mdi-vue.git"
+    "url": "git+https://github.com/maxle5/mdi-vue3.git"
   },
   "scripts": {
     "build": "vue-tsc && vite build",
@@ -28,7 +28,8 @@
     "material-design-icons",
     "vue3",
     "vue",
-    "vuejs"
+    "vuejs",
+    "mdi"
   ],
   "peerDependencies": {
     "vue": "^3.0.0"

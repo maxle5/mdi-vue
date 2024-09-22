@@ -3,14 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "dist/mdi-vue.js",
+  "main": "dist/mdi-vue3.js",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@maxle5/mdi-vue": "^7.4.47",
+    "@maxle5/mdi-vue3": "^7.4.47",
     "vue": "^3.4.29"
   },
   "devDependencies": {
