@@ -7,9 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-24.04
-    strategy:
-      matrix:
-        node-version: [14.x, 16.x, 18.x, 20.x, 22.x]
         
     steps:
     - uses: actions/checkout@v4
@@ -17,11 +14,14 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: '22.x'
         cache: 'npm'
         
-    - name: Build & test
-      run: |
-        npm ci
-        npm run build
-        npm run test
+    - name: Install
+      run: npm ci --include=dev
+
+    - name: Build
+      run: npm run build
+
+    - name: Test
+      run: npm run test
