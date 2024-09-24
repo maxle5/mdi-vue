@@ -22,6 +22,6 @@ jobs:
         
     - name: Build & test
       run: |
-        npm ci
+        npm ci --include=dev
         npm run build
         npm run test
