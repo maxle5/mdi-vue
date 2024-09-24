@@ -10,6 +10,7 @@ export default defineConfig({
       entry: resolve(__dirname, "src/index.ts"),
       name: "@maxle5/mdi-vue3",
       fileName: (format) => `mdi-vue3.${format}.js`,
+      formats: ['es'],
     },
     rollupOptions: {
       external: ["vue"],
